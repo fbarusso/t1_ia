@@ -92,6 +92,3 @@ matplotlib.use('Qt5Agg')
 networkx_graph = osm_object.to_graph(nodes, edges, graph_type="networkx")
 
 fig, ax = osmnx.plot_graph_route(networkx_graph, reconstructed_path, route_linewidth=6, node_size=0, bgcolor='k')
-
-route = nx.shortest_path(networkx_graph, source_node, target_node, weight="length")
-fig, ax = osmnx.plot_graph_route(networkx_graph, route, route_linewidth=6, node_size=0, bgcolor='k')

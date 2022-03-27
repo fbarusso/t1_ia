@@ -30,7 +30,7 @@ class PriorityQueue(object):
         try:
             max_priority_index = 0
             for i in range(len(self.queue)):
-                if self.queue[i][1] > self.queue[max_priority_index][1]:
+                if self.queue[i][1] < self.queue[max_priority_index][1]:
                     max_priority_index = i
             item = self.queue[max_priority_index][0]
             del self.queue[max_priority_index]
